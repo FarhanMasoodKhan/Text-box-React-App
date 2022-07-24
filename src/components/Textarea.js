@@ -12,8 +12,12 @@ export default function Textarea(props) {
             let newText = text.toLowerCase();
             setText(newText);
             }
-    
 
+        const  handleClearText = () => {
+            let newText = '';
+            setText(newText);
+            }
+        
         
         const handleOnChange = (event)=>{
             setText(event.target.value)
@@ -32,6 +36,8 @@ export default function Textarea(props) {
          <button type="button" onClick={handleUpClick} className="btn btn-primary">UPPER-CASE</button>
          
          <button type="button" onClick={handleDownClick} className="btn btn-primary m-2">lower-case</button>
+
+         <button type="button" onClick={handleClearText} className="btn btn-primary m-2">Clear</button>
     </div>
 
     <div className="container my-3">
